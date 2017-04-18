@@ -1,0 +1,30 @@
+@page {
+    size: auto;
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.card-back {
+    fill: rgba(60, 24, 81, 0.5);
+}
+
+.card-back text {
+    font-family: 'Ubuntu Condensed';
+    fill: #fff;
+    font-weight: 300;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 1);
+}
+
+.card-back .social-link {
+    font-family: 'Ubuntu';
+}
