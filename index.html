@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>facecards</title>
+        <title>People at the ElixirConf.EU 2017</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu:300,400&amp;subset=latin-ext" rel="stylesheet">
@@ -11,11 +11,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.4.0/svg.min.js"></script>
     </head>
     <body>
-        <div id="drawing"></div>
-
+        <div class="facecards" id="drawing">
+            <div class="promo-wrapper">
+                <div class="promo-preview"></div>
+                <div class="promo">
+                    <h1>Flashcards</h1>
+                    <h1>People at the conference</h1>
+                    <h2><a href="http://www.elixirconf.eu/">ElixirConf.EU</a></h2>
+                    <h3>Barcelona, 2017</h3>
+                    <button onclick="print()">Print</button>
+                    <p class="description">
+                        *Optimized for printing on photo paper (10x15cm)
+                    </p>
+                    <p>
+                        <a href="https://github.com/sprql/facecards">github.com/sprql/facecards</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="elixirconfeu2017.js"></script>
         <script src="facecards.js"></script>
         <script>
-            createDeck([]);
+            createDeck(elixirconfeu2017);
         </script>
     </body>
 </html>

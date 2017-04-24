@@ -1,21 +1,21 @@
 "use strict";
 
-const pageWidth = 100;
+const pageWidth = 98;
 const pageHeight = 148;
-const cardWidth = 50;
+const cardWidth = 49;
 const cardHeight = 74;
-const cardBackCoverURL = "elixir.png";
-const cardRadius = 1;
+const cardBackCoverURL = "background.png";
+const cardRadius = 0.5;
 
 const fontFamily = "Ubuntu";
-const baseFontSize = 9;
+const baseFontSize = 8.5;
 
 let svg = SVG("drawing").size(0, 0);
 let cardCover = svg.rect(cardWidth, cardHeight).radius(cardRadius);
 
 const cardCoverClip = svg.clip().add(cardCover);
 const cardBackCoverPattern = svg.pattern(cardWidth, cardHeight, function(add) {
-    add.image(cardBackCoverURL, cardWidth * 3, cardHeight * 3).move(-cardWidth * 0.8, -cardHeight * 1.2);
+    add.image(cardBackCoverURL, cardWidth, cardHeight).attr({ preserveAspectRatio: 'xMidYMid slice' })
 });
 
 
@@ -47,7 +47,7 @@ function createCardBack(faceCard) {
     if (socialLink) {
         let text = cardBack.text(socialLink).attr({ class: "social-link" }).move(cardWidth * 0.5, cardHeight * 0.8).font({
             family:   fontFamily,
-            size:     baseFontSize * 0.5,
+            size:     baseFontSize * 0.55,
             anchor:   'middle',
             leading:  '1.2em'
         });
